@@ -236,14 +236,14 @@ class ScanscreenState extends State<Scanscreen> {
           if (index != -1) {
             int deference = -1;
             if (deviceList[index].lastUpdateTime == null) {
-              deference = 3000;
+              deference = 30000;
             } else {
               Duration temps = DateTime.now()
                   .toLocal()
                   .difference(deviceList[index].lastUpdateTime);
 
-              if (temps.inMinutes > 3000) {
-                deference = 3000;
+              if (temps.inMinutes > 30000) {
+                deference = 30000;
               } else {
                 deference = temps.inMinutes + 10;
               }
@@ -1070,26 +1070,26 @@ class ScanscreenState extends State<Scanscreen> {
                                     ),
                                   ],
                                 ),
-                                // Row(
-                                //   mainAxisAlignment: MainAxisAlignment.center,
-                                //   children: [
-                                //     Image(
-                                //       image:
-                                //           AssetImage('images/ic_humidity.png'),
-                                //       fit: BoxFit.contain,
-                                //       width: MediaQuery.of(context).size.width *
-                                //           0.05,
-                                //       // height: MediaQuery.of(context).size.width * 0.1,
-                                //     ),
-                                //     Text(
-                                //       deviceList[index]
-                                //               .getHumidity()
-                                //               .toString() +
-                                //           '% ',
-                                //       style: noboldTextStyle,
-                                //     ),
-                                //   ],
-                                // ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image(
+                                      image:
+                                          AssetImage('images/ic_humidity.png'),
+                                      fit: BoxFit.contain,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.05,
+                                      // height: MediaQuery.of(context).size.width * 0.1,
+                                    ),
+                                    Text(
+                                      deviceList[index]
+                                              .getHumidity()
+                                              .toString() +
+                                          '% ',
+                                      style: noboldTextStyle,
+                                    ),
+                                  ],
+                                ),
                                 Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [

@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
    <application
-        android:label="지오영QC"
+        android:label="지오영 QA"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">
         <activity
